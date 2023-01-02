@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                  sh 'mvn -B -DskipTests clean package'
+                 sh 'mvn -f /plugins/ant/META-INF/maven/org.jenkins-ci.plugins/ant'
             }
         }
     }
